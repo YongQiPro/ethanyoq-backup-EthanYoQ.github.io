@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en" class="project-page watch-page theme-novel">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to Check Novel Chapter Continuity in Pagekin</title>
+  <meta name="description" content="Follow a two-chapter example in Pagekin 1.4.0. Carry forward a story fact, spot a contradiction, and choose which edits to apply to your novel draft.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://www.orz.md/en/ai-novel-writer/chapter-continuity/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.orz.md/en/ai-novel-writer/chapter-continuity/">
+  <meta property="og:title" content="How to Check Novel Chapter Continuity in Pagekin">
+  <meta property="og:description" content="Two short chapters, one missing handoff, and a revision you control. Follow the Windows 1.4.0 walkthrough.">
+  <meta property="og:image" content="https://www.orz.md/assets/shots/pagekin-continuity-1.4.0/01-finalized.webp">
+  <link rel="stylesheet" href="/home.css?v=20261106-pagekin">
+  <link rel="stylesheet" href="/project.css?v=20261026-locale">
+  <style>
+    .watch-copy h2 { margin: 2.3rem 0 .6rem; }
+    .watch-copy li { margin-bottom: .5rem; line-height: 1.65; }
+    .watch-copy details { margin: .8rem 0; padding: .9rem 1rem; border: 1px solid var(--line); border-radius: 14px; }
+    .watch-copy summary { cursor: pointer; }
+    .sample-check { padding-left: 1.1rem; border-left: 3px solid var(--line); }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#tutorial">Skip to tutorial</a>
+  <header class="site-header">
+    <nav class="nav shell" aria-label="Main navigation">
+      <a class="brand" href="/"><span class="brand-name">Ethan</span><span class="brand-slash">/</span><span class="brand-lab">AI LAB</span></a>
+      <div class="nav-links"><a href="/en/ai-novel-writer/">Pagekin</a><a href="https://github.com/EthanYoQ/Pagekin">GitHub</a></div>
+    </nav>
+  </header>
+  <main id="tutorial">
+    <article class="watch-shell">
+      <div class="watch-copy">
+        <p class="project-breadcrumb"><a href="/">Ethan AI Lab</a> / <a href="/en/ai-novel-writer/">Pagekin</a> / Chapter continuity</p>
+        <h1>How to check novel chapter continuity in Pagekin</h1>
+        <p>At the end of Chapter 1, Mara has the brass key and Ivo does not know about it. Chapter 2 opens at the right time and place, but its draft says Ivo had the key all along. Walk through that contradiction from the finalized chapter to the draft review and revision.</p>
+        <p>Tested in <a href="https://github.com/EthanYoQ/Pagekin/releases/tag/v1.4.0">Pagekin 1.4.0</a> on Windows with the English interface. Grayglass is an original two-chapter sample created for this guide. To follow along, <a href="/en/ai-novel-writer/#install">install Pagekin and configure a model</a>, then choose English in <strong>Settings → Appearance → Interface language</strong>. Model output can vary.</p>
+        <nav aria-label="Tutorial steps">
+          <ol>
+            <li><a href="#finalize">Confirm what happened in Chapter 1</a></li>
+            <li><a href="#carry-over">Carry those facts into Chapter 2</a></li>
+            <li><a href="#review">Check the draft for contradictions</a></li>
+            <li><a href="#revise">Choose which edits to apply</a></li>
+          </ol>
+        </nav>
+        <h2 id="finalize">1. Confirm what happened in Chapter 1</h2>
+        <p>In a fresh book with English set as the writing language, use the book menu’s <strong>Novel breakdown &amp; imitation</strong> command. Choose <strong>My manuscript</strong> and <strong>Import into current project</strong>. Select <a href="chapter-1.txt" download>Chapter 1: The Ferry Receipt</a>. Turn on the option to infer settings, architecture, characters, and blueprints. Check that the preview shows Chapter 1 and the target is the finalized manuscript, then confirm the import.</p>
+        <p>Open the chapter under <strong>Manuscript</strong>. In this run it was <strong>Final</strong> and read-only, with all three items under <strong>After finalization</strong> marked done: knowledge base import, chapter plot notes, and character state update.</p>
+        <p>The optional blueprint inference failed in this run, after the chapter and continuity updates were saved. We made the next blueprint by hand.</p>
+        <figure class="watch-tutorial"><a href="/assets/shots/pagekin-continuity-1.4.0/01-finalized.webp"><img src="/assets/shots/pagekin-continuity-1.4.0/01-finalized.webp" alt="Chapter 1 is Final and read-only, with all three after-finalization steps marked Done" width="1442" height="901" loading="lazy"></a><figcaption>In the English Windows interface, Chapter 1 is finalized before work starts on Chapter 2. Select the screenshot to enlarge it.</figcaption></figure>
+        <p>Before drafting the next scene, note what the first scene actually established:</p>
+        <ul>
+          <li><strong>Who has the key?</strong> The clerk gave it to Mara. She carried it away in her coat.</li>
+          <li><strong>What does Ivo know?</strong> Mara showed him empty hands. No handoff occurred.</li>
+          <li><strong>When can they enter?</strong> The archive opens at dawn on Wednesday, after the Tuesday ferry scene.</li>
+        </ul>
+        <h2 id="carry-over">2. Carry those facts into Chapter 2</h2>
+        <p>In this import, with inference enabled, Pagekin offered cast suggestions under <strong>Architecture → Cast</strong>. Open <strong>Review</strong>, check the proposed relationships against the chapter, and use <strong>Accept decisions</strong> when they match. We selected the entries that record what Mara received, what she hid from Ivo, and when the archive opens.</p>
+        <figure class="watch-tutorial"><a href="/assets/shots/pagekin-continuity-1.4.0/02-confirmed-facts.webp"><img src="/assets/shots/pagekin-continuity-1.4.0/02-confirmed-facts.webp" alt="Three selected cast suggestions record that Mara received the key, kept the handoff secret from Ivo, and learned the archive opens at dawn on Wednesday" width="1442" height="901" loading="lazy"></a><figcaption>These are selectable suggestions from the Chapter 1 import. Read them before accepting the batch.</figcaption></figure>
+        <p>In <strong>Blueprint</strong>, open <strong>More blueprint actions → New chapter</strong>. Name Chapter 2 <em>Locker Nine</em> and set its goal to “Mara reaches the Grayglass archive and opens locker nine.” Save the chapter. The blueprint used in this test did not specify the key holder, its notch, or the opening time.</p>
+        <p>Open Chapter 2 under <strong>Manuscript</strong> and select <strong>Write this chapter</strong>. The model opened the scene at dawn on Wednesday and put the notched brass key in Mara’s hand. Compare that passage with the finalized Chapter 1. That is how you can tell which details carried over in this run.</p>
+        <figure class="watch-tutorial"><a href="/assets/shots/pagekin-continuity-1.4.0/03-context.webp"><img src="/assets/shots/pagekin-continuity-1.4.0/03-context.webp" alt="The generated Chapter 2 begins at dawn on Wednesday and describes the notched brass key against Mara’s palm" width="1442" height="901" loading="lazy"></a><figcaption>The generated draft carries over the opening time, key holder, and notch without those details in the Chapter 2 blueprint.</figcaption></figure>
+        <h2 id="review">3. Check the draft for contradictions</h2>
+        <p>For the review test, replace the generated text with <a href="chapter-2-draft.txt" download>the original Chapter 2 draft</a>. Paste the story text below the heading into the editor. Save with <kbd>Ctrl</kbd>+<kbd>S</kbd> on Windows, then select <strong>AI review</strong>.</p>
+        <p class="sample-check"><strong>Draft passage:</strong> “Ivo handed her the brass key. He had kept it since the ferry ride.”</p>
+        <p>The scene still opens at the right time. The contradiction is the claimed handoff: Chapter 1 showed Mara taking the key and hiding it from Ivo. Check custody, character knowledge and timing separately so a valid scene detail does not get rewritten along with the error.</p>
+        <p>In our run, the review marked the key handoff as a <strong>Critical issue · plot continuity</strong>. It pointed back to Mara pocketing the key, showing Ivo empty hands, and still holding the key during the climb. The report also said goal acceptance was not performed: the test blueprint had no chapter key events configured. Treat that as an unverified check, not a story error to rewrite.</p>
+        <figure class="watch-tutorial"><a href="/assets/shots/pagekin-continuity-1.4.0/04-review.webp"><img src="/assets/shots/pagekin-continuity-1.4.0/04-review.webp" alt="The review flags Ivo handing over the key and cites three actions Mara took in the finalized Chapter 1" width="1442" height="901" loading="lazy"></a><figcaption>Read the flagged line and compare the report’s explanation with Chapter 1. The report did not give the draft an overall pass.</figcaption></figure>
+        <h2 id="revise">4. Choose which edits to apply</h2>
+        <p>Keep the key continuity note checked. Leave the goal verification item unchecked. For this test we used <strong>Add my note</strong> to record an optional style edit about the repeated word “shook,” then unchecked that note to leave it out of this pass. Select <strong>Revise with 1 note</strong>.</p>
+        <figure class="watch-tutorial"><a href="/assets/shots/pagekin-continuity-1.4.0/05-select.webp"><img src="/assets/shots/pagekin-continuity-1.4.0/05-select.webp" alt="The optional author note about repeated wording is unchecked and the revision button says Revise with 1 note" width="1442" height="901" loading="lazy"></a><figcaption>Only checked notes guide this revision. The optional style note stays out.</figcaption></figure>
+        <p>Compare each paragraph before accepting it. Even with one note selected, the model proposed four changes. Use the controls on each paragraph to decide:</p>
+        <ul>
+          <li><strong>Revision:</strong> Keep the added paragraph in which Mara takes the brass key from her coat pocket.</li>
+          <li><strong>Edit:</strong> The proposed replacement said Ivo let Mara go first, but the preceding paragraph already had her follow him inside. We replaced that suggestion with “Ivo went ahead toward the records desk.”</li>
+          <li><strong>Original:</strong> Leave two added paragraphs out. The extra movements by the window and locker were unnecessary to fix the handoff.</li>
+        </ul>
+        <figure class="watch-tutorial"><a href="/assets/shots/pagekin-continuity-1.4.0/07-edit.webp"><img src="/assets/shots/pagekin-continuity-1.4.0/07-edit.webp" alt="The merge shows four changes, with one paragraph selected from the revision and one edited by hand" width="1442" height="901" loading="lazy"></a><figcaption>The merge lets you use the original, use the revision, or edit the paragraph yourself.</figcaption></figure>
+        <p>Select <strong>Finish merge</strong>. In the saved <strong>Revised v1</strong>, Mara has the key. The repeated “shook” and the last line (“The envelope was lighter than the trouble it had brought.”) are still there. Chapter 1 stays finalized. Chapter 2 is ready to finalize after the author’s last read.</p>
+        <figure class="watch-tutorial"><a href="/assets/shots/pagekin-continuity-1.4.0/08-saved.webp"><img src="/assets/shots/pagekin-continuity-1.4.0/08-saved.webp" alt="The saved Revised v1 shows Ivo going toward the desk and Mara taking the key from her coat" width="1442" height="901" loading="lazy"></a><figcaption>The saved draft shows the selected merge. Chapter 2 is still at the author’s finalization step.</figcaption></figure>
+        <p>Compare all three versions: <a href="chapter-1.txt" download>Chapter 1, finalized</a> · <a href="chapter-2-draft.txt" download>Chapter 2, before review</a> · <a href="chapter-2-revised.txt" download>Chapter 2, after the merge</a>.</p>
+        <div class="watch-actions"><a class="button button-primary" href="/en/ai-novel-writer/">Explore Pagekin</a><a class="button button-ghost" href="https://github.com/EthanYoQ/Pagekin/releases/latest">Download the app</a></div>
+        <p><small>Published by EthanYoQ. Prepared with AI assistance using an isolated sample project and screenshots from the actual app.</small></p>
+      </div>
+    </article>
+  </main>
+</body>
+</html>
